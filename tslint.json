@@ -76,6 +76,7 @@
       true,
       "as-needed"
     ],
+    "no-string-literal": false,
     "quotemark": [
       true,
       "single"
