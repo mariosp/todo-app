@@ -20,6 +20,10 @@
   color: var(--color2);
 }
 
+.divider{
+  margin-top: 5%!important;
+}
+
 @media (max-width: 450px) {
   .card {
     width: 100%;

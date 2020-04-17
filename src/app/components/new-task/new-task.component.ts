@@ -19,11 +19,11 @@ export class NewTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleInputChange(event){
-    this.inputValue = event;
+  handleInputChange(event: Event): void {
+    this.inputValue = event.target['value'];
   }
 
-  async onSubmit() {
+  onSubmit(): void {
     this.loading = true;
     const task: Task = {
       userId : 1,
@@ -33,6 +33,7 @@ export class NewTaskComponent implements OnInit {
     this.apiService.addNewUserTask(task).subscribe(res => {
       this.loading = false;
       this.inputValue = '';
+      this.apiService.addTask(res);
     }, error => {
       this.loading = false;
       this.openSnackBar('Error while saving your task. Please try again');

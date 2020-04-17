@@ -14,3 +14,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color4: #D4D6B9;
   --color5: #D1CAA1;
 }
+
+.mat-checkbox-inner-container {
+  height: 35px!important;
+  width: 35px!important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color:  var(--color3);
+  border-radius: 5px!important;
+}
+.mat-checkbox-frame {
+  border-color: var(--color3);
+  border-radius: 5px!important;
+}

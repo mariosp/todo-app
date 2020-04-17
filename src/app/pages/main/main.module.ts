@@ -9,6 +9,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {InputViewDirective} from '../../directives/input-view.directive';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { TaskListComponent } from '../../components/task-list/task-list.component';
+import { MatDividerModule } from '@angular/material/divider';
+import {TaskItemComponent} from '../../components/task-item/task-item.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 const Routes: Routes = [
   {
@@ -23,16 +27,20 @@ const Routes: Routes = [
   declarations: [
     MainComponent,
     NewTaskComponent,
-    InputViewDirective
+    InputViewDirective,
+    TaskListComponent,
+    TaskItemComponent
   ],
-    imports: [
-        CommonModule,
-        RouterModule.forChild(Routes),
-        MatCardModule,
-        MatInputModule,
-        MatIconModule,
-        MatButtonModule,
-        MatProgressSpinnerModule
-    ]
+  imports: [
+    CommonModule,
+    RouterModule.forChild(Routes),
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatDividerModule,
+    MatCheckboxModule
+  ]
 })
 export class MainModule { }

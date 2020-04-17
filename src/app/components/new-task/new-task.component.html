@@ -1,8 +1,8 @@
 <div class="wrapper">
-  <input appInputView type="search" placeholder="type your new task" class="input-style"
+  <input type="search" placeholder="type your new task" class="input-style"
          [value]="inputValue"
          [disabled]="loading"
-         (inputValueChange)="this.handleInputChange($event)"
+         (input)="this.handleInputChange($event)"
   />
   <button [disabled]="!inputValue || loading" mat-stroked-button color="primary" class="add-button"
           (click)="onSubmit()"

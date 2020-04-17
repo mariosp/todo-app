@@ -1,0 +1,37 @@
+.wrapper-placeholder {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 5%  0;
+}
+
+.loader{
+  margin: 0 auto;
+}
+
+.empty-placeholder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.placeholder-text {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  color: var(--color2);
+}
+.placeholder-icon {
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--color2);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 5%  0;
+}

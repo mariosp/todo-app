@@ -1,0 +1,21 @@
+<div class="wrapper"
+     (mouseenter)="handleMouseEvents('enter')"
+     (mouseleave)="handleMouseEvents('out')"
+>
+  <mat-checkbox class="checkbox"
+    [checked]="task.completed"
+    (change)="handleCheckBox()"
+  >
+  </mat-checkbox>
+  <input #inputEl type="text" class="input-style" [ngClass]="[inputClassName, inputLineThroughClassName].join(' ')"
+     [value]="inputValue"
+     [disabled]="loading"
+     (input)="handleInputChange($event)"
+     (focus)="handleFocus('focus')"
+     (blur)="handleFocus('blur')"
+     (keyup.enter)="handleEnterUp()"
+  />
+  <button mat-stroked-button color="primary" class="delete-button" [ngClass]="deleteClassName" (click)="handleDelete()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
