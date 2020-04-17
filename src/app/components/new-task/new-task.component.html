@@ -1,6 +1,13 @@
 <div class="wrapper">
   <input appInputView type="search" placeholder="type your new task" class="input-style"
+         [value]="inputValue"
+         [disabled]="loading"
          (inputValueChange)="this.handleInputChange($event)"
   />
-  <button [disabled]="!buttonAddEnabled" mat-stroked-button color="primary" class="add-button"><mat-icon>add</mat-icon></button>
+  <button [disabled]="!inputValue || loading" mat-stroked-button color="primary" class="add-button"
+          (click)="onSubmit()"
+  >
+    <mat-icon *ngIf="!loading">add</mat-icon>
+    <mat-progress-spinner *ngIf="loading" [diameter]="30" mode="indeterminate"></mat-progress-spinner>
+  </button>
 </div>

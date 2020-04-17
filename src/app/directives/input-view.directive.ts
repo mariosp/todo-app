@@ -15,6 +15,7 @@ export class InputViewDirective {
 
   setInputValue(value: string) {
     this.inputValue = value;
+    console.log(value)
     this.inputValueChanged();
   }
 

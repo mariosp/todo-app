@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {InputViewDirective} from '../../directives/input-view.directive';
 import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const Routes: Routes = [
   {
@@ -24,13 +25,14 @@ const Routes: Routes = [
     NewTaskComponent,
     InputViewDirective
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(Routes),
-    MatCardModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(Routes),
+        MatCardModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        MatProgressSpinnerModule
+    ]
 })
 export class MainModule { }

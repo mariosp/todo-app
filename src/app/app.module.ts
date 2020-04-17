@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const Routes: Routes = [
   {
@@ -26,6 +28,8 @@ const Routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    MatSnackBarModule,
     RouterModule.forRoot(Routes)
   ],
   providers: [],
