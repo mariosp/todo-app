@@ -29,7 +29,7 @@
 
 .delete-button {
   height: 35px;
-  color: var(--color2);
+  color: var(--color3);
   margin-left: 5px;
   border-radius: 5px;
   display: none;

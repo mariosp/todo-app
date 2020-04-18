@@ -6,7 +6,6 @@ import { MatCardModule } from '@angular/material/card';
 import { NewTaskComponent } from '../../components/new-task/new-task.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-import {InputViewDirective} from '../../directives/input-view.directive';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { TaskListComponent } from '../../components/task-list/task-list.component';
@@ -27,7 +26,6 @@ const Routes: Routes = [
   declarations: [
     MainComponent,
     NewTaskComponent,
-    InputViewDirective,
     TaskListComponent,
     TaskItemComponent
   ],
