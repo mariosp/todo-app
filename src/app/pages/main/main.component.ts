@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-main',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  imgUrl: string;
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    console.log('MAIN COMPONENT');
+    this.imgUrl = this.authService.user.photoURL;
   }
 
+  handleLogOut() {
+    this.authService.logout();
+  }
 }

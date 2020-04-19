@@ -12,6 +12,7 @@ import { TaskListComponent } from '../../components/task-list/task-list.componen
 import { MatDividerModule } from '@angular/material/divider';
 import {TaskItemComponent} from '../../components/task-item/task-item.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const Routes: Routes = [
   {
@@ -20,8 +21,6 @@ const Routes: Routes = [
   }
 ];
 
-
-
 @NgModule({
   declarations: [
     MainComponent,
@@ -29,16 +28,17 @@ const Routes: Routes = [
     TaskListComponent,
     TaskItemComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(Routes),
-    MatCardModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    MatDividerModule,
-    MatCheckboxModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(Routes),
+        MatCardModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        MatProgressSpinnerModule,
+        MatDividerModule,
+        MatCheckboxModule,
+        MatTooltipModule
+    ]
 })
 export class MainModule { }

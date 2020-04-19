@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Task} from '../../models/task';
 import {ApiService} from '../../services/api.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-new-task',
@@ -13,7 +14,8 @@ export class NewTaskComponent implements OnInit {
   loading: boolean;
   constructor(
     private apiService: ApiService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -26,7 +28,7 @@ export class NewTaskComponent implements OnInit {
   onSubmit(): void {
     this.loading = true;
     const task: Task = {
-      userId : 1,
+      userId : this.authService.user.uid,
       title: this.inputValue,
       completed: false
     };

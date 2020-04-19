@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Observable, Subject} from 'rxjs';
 import {Task} from '../models/task';
+import {AuthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,12 @@ export class ApiService {
   private userTasks = new Subject();
   public userTasks$ = this.userTasks.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private authService: AuthService) { }
 
   getUserTasks(): Observable<any> {
-    return this.http.get(`${environment.serverUrl}/todos`,  {params: {userId: '1'}});
+    return this.http.get(`${environment.serverUrl}/todos`,  {params: {userId: this.authService.user.uid}});
   }
 
   addNewUserTask(data): Observable<any> {

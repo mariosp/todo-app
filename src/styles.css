@@ -4,10 +4,6 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 :root {
-  /*--background: #F4A261;*/
-  /*--primary: rgb(127, 108, 94);*/
-  /*--secondary: rgb(103, 61, 62);*/
-  /*--text: "";*/
   --color1: #32213A;
   --color2: #383B53;
   --color3: #66717E;
@@ -27,4 +23,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-checkbox-frame {
   border-color: var(--color3);
   border-radius: 5px!important;
+}
+
+.mat-mini-fab .mat-button-wrapper {
+  padding: 0!important;
 }
