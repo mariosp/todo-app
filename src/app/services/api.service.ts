@@ -18,15 +18,15 @@ export class ApiService {
     return this.http.get(`${environment.serverUrl}/todos`,  {params: {userId: '1'}});
   }
 
-  addNewUserTask(data) {
+  addNewUserTask(data): Observable<any> {
     return this.http.post(`${environment.serverUrl}/todos`, data);
   }
 
-  updateTask(id: number, data) {
+  updateTask(id: number, data): Observable<any> {
     return this.http.patch(`${environment.serverUrl}/todos/${id}`, data);
   }
 
-  deleteTask(id: number) {
+  deleteTask(id: number): Observable<any> {
     return this.http.delete(`${environment.serverUrl}/todos/${id}`);
   }
 
