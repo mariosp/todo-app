@@ -16,11 +16,15 @@
   color: var(--color4);
 }
 
-.sign-in-button {
+.sign-in-button-g {
   background: var(--color4);
 }
 
-.sign-in-button img {
+.sign-in-button-g img {
   height: 20px;
   width: 20px;
+}
+
+.inner-text-g{
+  color: var(--color2);
 }
