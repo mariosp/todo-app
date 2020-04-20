@@ -15,7 +15,8 @@ export class ApiService {
 
   constructor(
     private http: HttpClient,
-    private authService: AuthService) { }
+    private authService: AuthService
+  ) { }
 
   getUserTasks(): Observable<any> {
     return this.http.get(`${environment.serverUrl}/todos`,  {params: {userId: this.authService.user.uid}});

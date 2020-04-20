@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {Task} from '../../models/task';
-import {ApiService} from '../../services/api.service';
+import {Component, OnInit} from '@angular/core';
+import { Task } from '../../models/task';
+import { ApiService } from '../../services/api.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {AuthService} from '../../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-new-task',
@@ -45,5 +45,4 @@ export class NewTaskComponent implements OnInit {
   openSnackBar(msg: string): void {
     this.snackBar.open(msg, 'Dismiss', {duration: 5000});
   }
-
 }

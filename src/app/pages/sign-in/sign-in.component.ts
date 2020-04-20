@@ -13,10 +13,9 @@ export class SignInComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('SIGN IN COMPONENT');
   }
 
-  handleGoogleButton() {
+  handleGoogleButton(): void {
     this.authService.loginWithGoogle();
   }
 

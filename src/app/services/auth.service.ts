@@ -15,7 +15,6 @@ export class AuthService {
   ) {
     this.user = JSON.parse(localStorage.getItem('user')) || null;
     this.fireAuth.authState.subscribe(user => {
-      console.log(user);
       this.user = user;
       if (this.user){
         localStorage.setItem('user', JSON.stringify(this.user));
@@ -29,7 +28,6 @@ export class AuthService {
   loginWithGoogle(): Promise<any> {
     return this.fireAuth.signInWithPopup(new auth.GoogleAuthProvider())
       .then( success => {
-        console.log(success)
         this.user = success.user;
         this.router.navigate(['']);
       })

@@ -21,11 +21,9 @@ export class TaskListComponent implements OnInit {
     this.getUserTasks();
   }
 
-  getUserTasks() {
+  getUserTasks(): void {
     this.apiService.getUserTasks().subscribe(res => {
-      console.log(res)
       this.loading = false;
-      // this.tasks = res;
       this.apiService.setTasks(res);
     }, error => {
       this.loading = false;
@@ -34,7 +32,6 @@ export class TaskListComponent implements OnInit {
 
     this.apiService.userTasks$.subscribe((tasks: Task[])  => {
         this.tasks = tasks;
-        console.log(this.tasks)
     });
   }
 

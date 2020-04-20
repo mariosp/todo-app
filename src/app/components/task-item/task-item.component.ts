@@ -22,14 +22,12 @@ export class TaskItemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.task);
     this.inputValue = this.task.title;
     this.inputLineThroughClassName = this.task.completed ? 'line' : '';
   }
 
   handleDelete(): void {
     this.apiService.deleteTask(this.task.id).subscribe(res => {
-      console.log(res);
       this.apiService.removeTask(this.task.id);
     }, error => {
       this.openSnackBar('Error saving your data');
@@ -41,7 +39,6 @@ export class TaskItemComponent implements OnInit {
     this.inputLineThroughClassName = this.task.completed ? 'line' : '';
 
     this.apiService.updateTask(this.task.id, {completed: this.task.completed}).subscribe(res => {
-      console.log(res);
       this.apiService.editTask(res);
     }, error => {
       this.task.completed = !this.task.completed;
@@ -61,7 +58,6 @@ export class TaskItemComponent implements OnInit {
       this.inputValue = title;
     } else if (inputValue !== title) {
       this.apiService.updateTask(this.task.id, { title: inputValue } ).subscribe(res => {
-        console.log(res);
         this.apiService.editTask(res);
       }, error => {
         this.openSnackBar('Error saving your data');

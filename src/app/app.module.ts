@@ -19,7 +19,7 @@ const Routes: Routes = [
   {
     path: 'sign-in',
     loadChildren: () => import('./pages/sign-in/sign-in.module').then(m => m.SignInModule),
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   { path: '',
     redirectTo: '/',
