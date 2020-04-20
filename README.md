@@ -1,27 +1,67 @@
-# Todoapp
+<h1 align="center">
+To-do app
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+<p align="center">Angular 9- Firebase Auth - Material UI - Express - Json-server<p>
 
-## Development server
+### Small to-do app with authorization via Firebase Auth
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Heroku](https://heroku-badge.herokuapp.com/?app=todos-angular)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+> You need to have Node installed to run the project locally
 
-## Running unit tests
+### Server Installation and running (Json-server)
+Install dependencies
+```sh
+$ cd json-server
+$ npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To start the server run: 
+```sh
+$ npm start
+```
+Json-server : http://localhost:3000/todos
 
-## Running end-to-end tests
+### Client (front-end) Installation and running
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Install dependencies
+```sh
+$ npm install
+```
+To start the app run
+```sh
+$ npm start
+```
+Angular todo-app : http://localhost:4200
 
-## Further help
+### Firebase Auth initialization
+Create a new project on Firebase and add Google auth.
+Replace firebase config variables on enviroment.ts file with your own.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Test the app
+
+You can preview the app on heroku: 
+
+[todos-angular](https://todos-angular.herokuapp.com/)
+
+
+## Application Screenshots
+ 
+Desktop
+
+![Desktop main](https://user-images.githubusercontent.com/3619970/79741830-928f5500-830a-11ea-8d27-ab1a7121e0f9.PNG)
+
+![Desktop sign-in](https://user-images.githubusercontent.com/3619970/79741833-928f5500-830a-11ea-8bd2-94783b2049c1.PNG)
+
+Mobile
+
+![mobile-sign-in](https://user-images.githubusercontent.com/3619970/79741825-8efbce00-830a-11ea-93eb-429b2155c83a.png)
+
+![mobile-main](https://user-images.githubusercontent.com/3619970/79741828-90c59180-830a-11ea-93c1-11c921ad6aac.png)
