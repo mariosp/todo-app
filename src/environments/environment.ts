@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'http://localhost:3000',
+  serverUrl: 'http://localhost:8080',
   firebase: {
     apiKey: 'AIzaSyBx-clRxjAtjniw1bxBG_p7-4DtnhKQX6g',
     authDomain: 'todos-angular-app.firebaseapp.com',
